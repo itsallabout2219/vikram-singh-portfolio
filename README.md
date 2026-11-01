@@ -4,13 +4,11 @@ A responsive portfolio website for **Vikram Singh, Senior Flutter Developer**, b
 
 ## Features
 
-- Responsive desktop and mobile layouts with a modern aesthetic and lavender color theme
+- Responsive editorial design with warm paper tones, bold typography, cobalt blue, and vermilion accents
 - 30 production releases across Web, Google Play, and Apple App Store featured in 8 interactive project cards
-- Animated hero profile, floating technology tags, and orbital accents
-- Scroll reveal animations
+- Graphic profile card and CSS-built product illustrations
+- Reduced-motion-aware scroll reveals
 - Interactive project filters (Commerce, Mobility, Operations)
-- Dark/light theme toggle
-- Mouse tilt interaction on the profile card
 - Mobile navigation menu
 - Résumé download
 - No framework, build command, or backend required
@@ -19,16 +17,9 @@ A responsive portfolio website for **Vikram Singh, Senior Flutter Developer**, b
 
 Open `index.html` in your browser. For a local server, you can use VS Code Live Server.
 
-## Publish with GitHub Pages
+## Publish
 
-1. Create a GitHub repository, for example `vikram-singh-portfolio`.
-2. Upload **all files and folders** from this directory, including `.nojekyll` and `assets/`.
-3. On GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose branch `main` and folder `/ (root)`, then click **Save**.
-6. Wait for GitHub Pages to publish the site. The URL will look like `https://STRANGE08.github.io/vikram-singh-portfolio/`.
-
-If you want the site at `https://STRANGE08.github.io/` instead, name the repository exactly `STRANGE08.github.io`.
+Upload all files and folders to the public web root of your static hosting provider, including `assets/`. The site has no build step or backend.
 
 ## Before publishing
 
@@ -41,6 +32,6 @@ If you want the site at `https://STRANGE08.github.io/` instead, name the reposit
 ## Files
 
 - `index.html` — content and structure
-- `styles.css` — styling, responsive layout, animation
-- `script.js` — filtering, reveal, theme toggle, mobile navigation
+- `styles.css` — visual system, responsive layout, and product illustrations
+- `script.js` — project filters, scroll reveals, rotating hero copy, and mobile navigation
 - `assets/Vikram-Singh-Resume.pdf` — résumé download
