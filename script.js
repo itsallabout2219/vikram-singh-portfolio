@@ -20,7 +20,8 @@ filterButtons.forEach(button => {
     const filter = button.dataset.filter;
     filterButtons.forEach(item => item.classList.toggle('active', item === button));
     projectCards.forEach(card => {
-      const show = filter === 'all' || card.dataset.category === filter;
+      const categories = (card.dataset.category || '').split(/\s+/);
+      const show = filter === 'all' || categories.includes(filter);
       card.classList.toggle('is-hidden', !show);
     });
   });
@@ -70,7 +71,7 @@ const applyTheme = (isLight) => {
     themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
   }
   if (metaThemeColor) {
-    metaThemeColor.setAttribute('content', isLight ? '#f3f2ed' : '#101114');
+    metaThemeColor.setAttribute('content', isLight ? '#f9f8fe' : '#0c0d16');
   }
 };
 
@@ -89,7 +90,7 @@ if (themeToggle) {
 
 // Rotating terminal microcopy.
 const terminalText = document.getElementById('terminal-text');
-const phrases = ['Building what’s next', 'Flutter · Dart · BLoC', 'From idea to release'];
+const phrases = ['Building what’s next', 'Flutter · Dart · BLoC', '30+ Web & Mobile releases', 'From idea to store release'];
 let phraseIndex = 0;
 if (terminalText) {
   window.setInterval(() => {

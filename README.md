@@ -4,7 +4,8 @@ A responsive portfolio website for **Vikram Singh, Senior Flutter Developer**, b
 
 ## Features
 
-- Responsive desktop and mobile layouts
+- Responsive desktop and mobile layouts with a modern aesthetic and lavender color theme
+- 30 production releases across Web, Google Play, and Apple App Store featured in 8 interactive project cards
 - Animated hero profile, floating technology tags, and orbital accents
 - Scroll reveal animations
 - Interactive project filters (Commerce, Mobility, Operations)
@@ -32,9 +33,9 @@ If you want the site at `https://STRANGE08.github.io/` instead, name the reposit
 ## Before publishing
 
 - Verify the contact information and LinkedIn URL.
-- Add your GitHub profile and real store/demo links if you want them shown.
-- Project illustrations are CSS-made visual placeholders, not screenshots of the actual apps.
-- The experience dates and project descriptions are based on the supplied résumé. The résumé lists the Blackbull role as June 2025–Present and describes the role at FSL as August 2024–March 2025.
+- All 30 web platform, Google Play Store, and Apple App Store links are linked directly to their live listings.
+- Project illustrations are CSS-made visual mockups matching each product's functionality.
+- The experience dates and project descriptions are based on your supplied résumé.
 - The “available for the right opportunity” line can be edited if it does not reflect your current status.
 
 ## Files
