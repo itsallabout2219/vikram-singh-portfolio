@@ -225,12 +225,18 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 
 @media (max-width: 900px) {
   :root { --page: min(100% - 42px, 720px); }
-  .hero { grid-template-columns: 1fr .8fr; min-height: 600px; padding-top: 70px; }
-  .hero h1 { font-size: clamp(60px, 10vw, 88px); }
-  .hero-meta { max-width: 470px; }
   .project-featured { grid-template-columns: 1fr; }
   .project-featured .project-visual { grid-row: auto; min-height: 250px; }
   .skills-layout { gap: 40px; }
+}
+@media (max-width: 760px) {
+  .hero { display: flex; flex-direction: column; align-items: stretch; min-height: 0; padding-top: 68px; }
+  .hero-copy { max-width: 640px; }
+  .hero-meta { max-width: 520px; }
+  .project-grid { grid-template-columns: 1fr; }
+  .project-featured { grid-column: auto; grid-template-columns: 1fr; }
+  .project-featured .project-visual { min-height: 250px; }
+  .section-heading { align-items: start; }
 }
 @media (max-width: 640px) {
   :root { --page: calc(100% - 36px); }
@@ -239,20 +245,23 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .nav { display: none; position: absolute; left: 0; right: 0; top: 70px; padding: 20px; background: var(--paper); border: 1px solid var(--ink); flex-direction: column; align-items: stretch; gap: 18px; }
   .nav.open { display: flex; }
   .nav-cta { text-align: center; }
-  .hero { display: flex; flex-direction: column; align-items: stretch; padding: 65px 0 62px; gap: 14px; }
-  .hero h1 { font-size: clamp(57px, 16vw, 88px); }
+  .hero { padding: 58px 0 62px; gap: 8px; }
+  .hero h1 { font-size: clamp(46px, 13vw, 82px); line-height: .94; }
   .hero-lead { font-size: 16px; }
   .hero-meta { gap: 9px; line-height: 1.7; }
   .hero-visual { min-height: 390px; margin-top: 10px; }
-  .hero-visual::before { width: 300px; }
+  .hero-visual::before { width: min(300px, 90vw); }
   .hero-visual::after { font-size: 190px; }
-  .profile-card { width: min(320px, 82%); padding: 20px; }
+  .profile-card { width: min(320px, calc(100% - 34px)); padding: 19px; }
+  .profile-row { align-items: flex-start; }
+  .profile-row strong { max-width: 58%; overflow-wrap: anywhere; }
   .tag-flutter { right: 0; top: 32px; }.tag-dart { left: 0; bottom: 45px; }.tag-api { right: 0; bottom: 58px; }
   .scroll-cue { bottom: 10px; }
   .intro-section, .work-section, .skills-section, .experience-section { padding-top: 75px; padding-bottom: 75px; }
   .intro-grid, .skills-layout { grid-template-columns: 1fr; gap: 25px; }
   .intro-grid h2, .section-heading h2, .skills-layout h2 { font-size: clamp(40px, 12vw, 58px); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); margin-top: 48px; }
+  .stat strong { font-size: clamp(19px, 6vw, 27px); }
   .stat { min-height: 110px; padding: 17px 12px; border-bottom: 1px solid var(--line); }
   .stat:first-child { padding-left: 0; }.stat:nth-child(2) { border-right: 0; }.stat:nth-child(n+3) { border-bottom: 0; }
   .section-heading { display: block; }
@@ -273,7 +282,30 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .contact-panel { padding: 35px 23px; }
   .contact-panel h2 { font-size: clamp(43px, 12vw, 60px); }
   .contact-panel::after { font-size: 190px; right: -20px; bottom: -65px; }
+  .contact-email { max-width: 100%; overflow-wrap: anywhere; font-size: 9px; }
   .footer { padding: 22px 0; display: grid; grid-template-columns: 1fr auto; row-gap: 15px; }
   .footer > span:nth-child(2) { display: none; }
   .copyright { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+  :root { --page: calc(100% - 30px); }
+  .site-header { height: 64px; }
+  .brand-mark { width: 34px; height: 34px; }
+  .brand { gap: 8px; font-size: 12px; }
+  .nav { top: 64px; padding: 17px; }
+  .hero { padding-top: 45px; }
+  .eyebrow { font-size: 8px; letter-spacing: .06em; }
+  .hero h1 { font-size: clamp(44px, 12.5vw, 54px); letter-spacing: -.085em; }
+  .hero-visual { min-height: 355px; }
+  .profile-card { padding: 16px; }
+  .profile-card h2 { font-size: 23px; }
+  .profile-row { font-size: 10px; }
+  .float-tag { padding: 7px 9px; font-size: 9px; }
+  .tag-flutter { top: 22px; }.tag-dart { bottom: 37px; }.tag-api { bottom: 48px; }
+  .button { min-width: 0; flex: 1 1 auto; padding: 12px; font-size: 12px; }
+  .stat { padding-inline: 9px; }
+  .stat > span { font-size: 8px; }
+  .contact-panel { padding: 30px 18px; }
+  .contact-panel h2 { font-size: clamp(40px, 11.5vw, 48px); }
+  .footer { column-gap: 10px; }
 }
